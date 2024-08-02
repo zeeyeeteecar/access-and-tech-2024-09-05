@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model TBEventReg_SEEE_2018_VenderInfo {
+  ID                  Int    @id @default(autoincrement())
+  VenderCompTitle     String @db.VarChar(50)
+  VenderContactPerson String @db.VarChar(50)
+  VenderResource      String @db.VarChar(50)
+  VenderEmail         String @db.VarChar(50)
+  VenderDescrip       String @db.Text
+  VenderBooth         String @db.VarChar(2)
+  VenderTel           String @db.VarChar(20)
+  TimeSlot1           String @db.VarChar(50)
+  TimeSlot2           String @db.VarChar(50)
+  TimeSlot3           String @db.VarChar(50)
+  TimeSlot4           String @db.VarChar(50)
+  TimeSlot5           String @db.VarChar(50)
+  TimeSlot6           String @db.VarChar(50)
+  TimeSlot7           String @db.VarChar(50)
+  TimeSlot8           String @db.VarChar(50)
+  TimeSlot9           String @db.VarChar(50)
+  TimeSlot10          String @db.VarChar(50)
+}
