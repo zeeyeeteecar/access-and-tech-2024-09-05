@@ -1,11 +1,11 @@
-import { redirect } from 'next/navigation'
- 
-export default function Page() {
-  // Logic to determine if a redirect is needed
-  const accessDenied = true
-  if (accessDenied) {
-    redirect('/login')
-  }
- 
-  // Define other routes and logic
+import React from "react";
+
+import { PrismaClient } from "@prisma/client";
+
+export default async function page() {
+  const prisma = new PrismaClient();
+
+  const users = await prisma.tBEventReg_SEEE_2018_VenderInfo.findMany();
+
+  return <>{JSON.stringify(users)}</>;
 }
