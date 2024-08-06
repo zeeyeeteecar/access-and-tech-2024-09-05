@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model tBEventReg_SEEE_2018_VenderInfo {
+model TBEventReg_SEEE_2018_VenderInfo {
   ID                  Int    @id @default(autoincrement())
   VenderCompTitle     String @db.VarChar(50)
   VenderContactPerson String @db.VarChar(50)
